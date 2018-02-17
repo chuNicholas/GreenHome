@@ -40,12 +40,6 @@
                 android:text="Analysis" />
 
             <android.support.design.widget.TabItem
-                android:id="@+id/Tab_Shopping List"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Shopping List" />
-
-            <android.support.design.widget.TabItem
                 android:id="@+id/Tab_Input"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
