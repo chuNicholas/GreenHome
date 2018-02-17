@@ -60,15 +60,15 @@ public class MainActivity extends AppCompatActivity {
         Test.CreateQuestion(rl);
 
         //gabriels swipe studff?
-        vSectionsPageAdapter = new SectionsPageAdapter(getSupportFragmentManager());
+       // vSectionsPageAdapter = new SectionsPageAdapter(getSupportFragmentManager());
 
-        mViewPager = (mViewPager) findViewById(R.id.container);
-        setupViewPager(mViewPager);
+        //mViewPager = (mViewPager) findViewById(R.id.container);
+        //setupViewPager(mViewPager);
 
 
 
     }
-
+/*
     private void setupViewPager(ViewPager viewPager) {
         SectionsPageAdapter adapter = new SectionsPageAdapter(getSupportFragmentManager());
         adapter.addFragment(new HomeFragment(), "Home");
@@ -77,5 +77,5 @@ public class MainActivity extends AppCompatActivity {
 
         viewPager.setAdapter(adapter);
     }
-
+*/
 }

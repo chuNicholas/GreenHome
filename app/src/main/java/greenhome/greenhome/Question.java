@@ -8,6 +8,7 @@ import android.sax.TextElementListener;
 import android.support.annotation.DrawableRes;
 import android.view.ContextThemeWrapper;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -48,10 +49,24 @@ public class Question {
         Icon.setY(30);
         Icon.setImageResource(getIcon());
         Icon.setLayoutParams(params);
+
+        Button yes = new Button(rl.getContext());
+        yes.setText("Yes");
+        yes.setX(90);
+        yes.setY(360);
+        yes.setLayoutParams(lp);
+        Button no = new Button(rl.getContext());
+        no.setText("No");
+        no.setX(360);
+        no.setY(360);
+        no.setLayoutParams(lp);
         rl.addView(banner);
         rl.addView(Icon);
         rl.addView(txt);
+        rl.addView(yes);
+        rl.addView(no);
     }
+
     private @DrawableRes int getIcon()
     {
         if (qType == energyType.Electric)
