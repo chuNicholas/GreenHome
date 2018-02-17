@@ -3,9 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/GreenHome.iml" filepath="$PROJECT_DIR$/GreenHome.iml" />
-      <module fileurl="file://C:\Users\Nicholas Chu\StudioProjects\GreenHome\GreenHome.iml" filepath="C:\Users\Nicholas Chu\StudioProjects\GreenHome\GreenHome.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://C:\Users\Nicholas Chu\StudioProjects\GreenHome\app\app.iml" filepath="C:\Users\Nicholas Chu\StudioProjects\GreenHome\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/googlemaps/googlemaps.iml" filepath="$PROJECT_DIR$/googlemaps/googlemaps.iml" />
     </modules>
   </component>
