@@ -29,4 +29,13 @@
         android:text="Next"
         tools:layout_editor_absoluteX="151dp"
         tools:layout_editor_absoluteY="438dp" />
+
+    <RelativeLayout
+        android:id="@+id/r1"
+        android:layout_width="224dp"
+        android:layout_height="134dp"
+        tools:layout_editor_absoluteX="68dp"
+        tools:layout_editor_absoluteY="216dp">
+
+    </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

@@ -1,8 +1,11 @@
 package greenhome.greenhome;
 
 import android.app.ActionBar;
+import android.content.Context;
+import android.view.ContextThemeWrapper;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 /**
  * Created by kashi on 2/17/2018.
@@ -15,12 +18,12 @@ public class Question {
         txt = q;
         qType = val;
     }
-    public void CreateQuestion()
+    public void CreateQuestion(RelativeLayout rl)
     {
-        //ImageView banner = new ImageView();
-        //banner.setImageResource(R.drawable.questioncard);
-        //ViewGroup.LayoutParams ls =
-
-
+        ImageView banner = new ImageView(rl.getContext());
+        banner.setImageResource(R.drawable.questioncard);
+        ViewGroup.LayoutParams lp = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        banner.setLayoutParams(lp);
+        rl.addView(banner);
     }
 }
