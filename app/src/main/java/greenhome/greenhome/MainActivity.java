@@ -18,7 +18,20 @@ import java.util.List;
 import java.util.ListIterator;
 import java.util.Stack;
 
+
+
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
+
+    private static final String TAG = "MainActivity";
+
+    private SectionsPageAdapter mSectionsPageAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,5 +58,24 @@ public class MainActivity extends AppCompatActivity {
         }
         Question Test = Qs.pop();
         Test.CreateQuestion(rl);
+
+        //gabriels swipe studff?
+        vSectionsPageAdapter = new SectionsPageAdapter(getSupportFragmentManager());
+
+        mViewPager = (mViewPager) findViewById(R.id.container);
+        setupViewPager(mViewPager);
+
+
+
     }
+
+    private void setupViewPager(ViewPager viewPager) {
+        SectionsPageAdapter adapter = new SectionsPageAdapter(getSupportFragmentManager());
+        adapter.addFragment(new HomeFragment(), "Home");
+        adapter.addFragment(new AnalysisFragment(), "Analysis");
+        adapter.addFragment(new GoalsFragment(), "Goals");
+
+        viewPager.setAdapter(adapter);
+    }
+
 }
