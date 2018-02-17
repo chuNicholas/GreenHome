@@ -48,6 +48,29 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.122">
 
+        <ImageView
+            android:id="@+id/questionBan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/questioncard" />
+
+        <ImageView
+            android:id="@+id/typeIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="21dp"
+            app:srcCompat="@drawable/common_google_signin_btn_icon_dark" />
+
+        <TextView
+            android:id="@+id/questionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/typeIcon"
+            android:layout_toEndOf="@+id/typeIcon"
+            android:text="TextView" />
     </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

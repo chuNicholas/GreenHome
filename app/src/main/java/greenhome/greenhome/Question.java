@@ -26,6 +26,11 @@ public class Question {
     }
     public void CreateQuestion(RelativeLayout rl)
     {
+        ImageView banner = rl.findViewById(R.id.questionBan);
+        ImageView icon = rl.findViewById(R.id.typeIcon);
+        TextView text = rl.findViewById(R.id.questionText);
+
+        /*
         ImageView banner = new ImageView(rl.getContext());
         banner.setImageResource(R.drawable.questioncard);
 
@@ -65,6 +70,7 @@ public class Question {
         rl.addView(txt);
         rl.addView(yes);
         rl.addView(no);
+        */
     }
 
     private @DrawableRes int getIcon()
