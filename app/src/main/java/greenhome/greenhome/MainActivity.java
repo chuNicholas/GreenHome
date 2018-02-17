@@ -10,7 +10,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //ImageView Logo = (ImageView) findViewById(R.id.Logo);
+        //final Button Logo = (ImageView) findViewById(R.id.Logo);
        // Logo.setLeft(999);
         //Logo.setTop(999);
     }
