@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">GreenHome</string>
+    <string name="title_activity_welcome__screen">Welcome_Screen</string>
 </resources>
