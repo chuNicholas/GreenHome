@@ -36,7 +36,7 @@ public class Question2 extends AppCompatActivity {
     private void LoadScreen(TextView text, Spinner options, Stack<String> q)
     {
         text.setText(q.pop());
-        String items[] = new String[]{"incandescent","LED", "Other" };
+        String items[] = new String[]{"Incandescent","LED", "CFL" };
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
         options.setAdapter((adapter));
     }

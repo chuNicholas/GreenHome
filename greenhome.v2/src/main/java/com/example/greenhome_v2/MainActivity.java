@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity
     Boolean firstPlay = true;
     static public Integer num_Of_Bulbs = 0;
     static public String type_Of_Bulb = "LED";
+    static public Double priceOfLightBulbs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +63,24 @@ public class MainActivity extends AppCompatActivity
             drawer.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
+        }
+    }
+
+    public void lightBulbConsumption() {
+        //Average hours a light bulb is on for per month in Ontario households
+        int lightBulbDuration = 180;
+        double costOfLED = 0.31;
+        double costOfCFL = 0.32;
+        double costOfIncan = 1.27;
+
+        if (type_Of_Bulb == "CFL") {
+            priceOfLightBulbs = costOfCFL * num_Of_Bulbs;
+        }
+        else if (type_Of_Bulb == "LED") {
+            priceOfLightBulbs = costOfLED * num_Of_Bulbs;
+        }
+        else if (type_Of_Bulb == "Incandescent") {
+            priceOfLightBulbs = costOfIncan * num_Of_Bulbs;
         }
     }
 
