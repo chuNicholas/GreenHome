@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity
     static public Double priceOfLightBulbs;
     static public Integer washing_Machine_Uses = 0;
     static public Boolean is_HE = false;
+    static public Integer dish_Washer_Uses = 0;
+    static public Boolean is_ES = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

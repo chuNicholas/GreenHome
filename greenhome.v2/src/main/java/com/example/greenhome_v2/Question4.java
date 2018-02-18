@@ -46,11 +46,13 @@ public class Question4 extends AppCompatActivity {
     }
     private void LoadNext(Spinner options, CheckBox options2)
     {
-        writeToFile(options.getSelectedItem().toString(), this);
+        //writeToFile(options.getSelectedItem().toString(), this);
+        MainActivity.dish_Washer_Uses = Integer.parseInt(options.getSelectedItem().toString());
+
         if(options2.isChecked())
-            writeToFile(("YES"), this);
+            MainActivity.is_ES = true;
         else
-            writeToFile("NO", this);
+            MainActivity.is_ES = false;
         Intent myIntent = new Intent(Question4.this, Question5.class);
         Question4.this.startActivity(myIntent);
     }
@@ -65,6 +67,7 @@ public class Question4 extends AppCompatActivity {
         Qs.push("How many times do you use the dishwasher per week?");
         return  Qs;
     }
+    /*
     private void writeToFile(String data,Context context) {
         try {
 
@@ -75,5 +78,5 @@ public class Question4 extends AppCompatActivity {
         catch (IOException e) {
             Log.e("Exception", "File write failed: " + e.toString());
         }
-    }
+    }*/
 }
