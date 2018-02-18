@@ -22,7 +22,7 @@ public class activity_input extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent launchIntent = getPackageManager().getLaunchIntentForPackage("com.package.address");
+                Intent launchIntent = getPackageManager().getLaunchIntentForPackage("com.example.googlemaps");
                 if (launchIntent != null) {
                     startActivity(launchIntent);//null pointer check in case package name was not found
                 }
