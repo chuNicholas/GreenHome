@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity
     static public double priceOfDishWasherWater;
     static public double priceofWasherElectricity;
     static public double priceofDishWasherElectricity;
+    static public double priceOfShowerWater;
     static public int people_in_Household = 1;
     static public int shower_Length = 1;
 
@@ -138,6 +139,10 @@ public class MainActivity extends AppCompatActivity
             priceofDishWasherElectricity = dish_Washer_Uses * 1.12;
         }
         priceOfElectricity = priceofWasherElectricity + priceofDishWasherElectricity;
+    }
+
+    public void showerConsumption() {
+        priceOfShowerWater = shower_Length * people_in_Household * 0.03 * 30;
     }
 
     @Override
