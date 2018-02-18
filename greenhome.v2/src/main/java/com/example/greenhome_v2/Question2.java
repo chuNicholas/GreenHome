@@ -57,7 +57,7 @@ public class Question2 extends AppCompatActivity {
         Qs.push("How many times do you use the dishwasher per week?");
         Qs.push("Is it HE?");
         Qs.push("How many times do you use the Washing Machine per week?");
-        Qs.push("About how many bulbs are in the house?");
+        Qs.push("What kind of lightbulbs are in the House");
         return  Qs;
     }
     private void writeToFile(String data,Context context) {
