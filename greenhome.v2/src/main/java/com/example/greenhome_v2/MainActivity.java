@@ -13,7 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-
+import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity
@@ -54,6 +54,10 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        TextView electricConsumption = findViewById(R.id.ElectricMoney);
+        TextView waterConsumption = findViewById(R.id.WaterMoney);
+
+        electricConsumption.setText("Electricity per Month" + priceOfLightBulbs.toString());
     }
 
     @Override
@@ -68,7 +72,7 @@ public class MainActivity extends AppCompatActivity
 
     public void lightBulbConsumption() {
         //Average hours a light bulb is on for per month in Ontario households
-        int lightBulbDuration = 180;
+        //int lightBulbDuration = 180;
         double costOfLED = 0.31;
         double costOfCFL = 0.32;
         double costOfIncan = 1.27;
