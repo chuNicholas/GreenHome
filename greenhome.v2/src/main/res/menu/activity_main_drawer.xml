@@ -25,6 +25,10 @@
             android:icon="@drawable/ic_menu_share"
             android:title="Input"/>
         <item
+            android:id="@+id/nav_Connect_Device"
+            android:icon="@drawable/side_nav_bar"
+            android:title="Connect to Device"/>
+        <item
             android:id="@+id/nav_Settings"
             android:icon="@drawable/ic_menu_manage"
             android:title="Settings"/>
