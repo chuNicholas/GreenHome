@@ -88,19 +88,39 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_Home) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+            Intent myIntent = new Intent(MainActivity.this, MainActivity.class);
+            MainActivity.this.startActivity(myIntent);
 
-        } else if (id == R.id.nav_slideshow) {
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_Goals) {
+            Intent myIntent = new Intent(MainActivity.this, Goals.class);
+            MainActivity.this.startActivity(myIntent);
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_Analysis) {
+            Intent myIntent = new Intent(MainActivity.this, activity_analysis.class);
+            MainActivity.this.startActivity(myIntent);
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_Shopping_List) {
+            Intent myIntent = new Intent(MainActivity.this, activity_shopping_list.class);
+            MainActivity.this.startActivity(myIntent);
+
+        } else if (id == R.id.nav_Input) {
+            Intent myIntent = new Intent(MainActivity.this, activity_input.class);
+            MainActivity.this.startActivity(myIntent);
+
+
+        } else if (id == R.id.nav_Settings) {
+            Intent myIntent = new Intent(MainActivity.this, activity_settings.class);
+            MainActivity.this.startActivity(myIntent);
+
+        } else if (id == R.id.nav_Connect_Device) {
+            Intent myIntent = new Intent(MainActivity.this, activity_connect_to_device.class);
+            MainActivity.this.startActivity(myIntent);
 
         }
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

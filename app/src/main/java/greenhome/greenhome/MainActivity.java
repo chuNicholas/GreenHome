@@ -3,6 +3,7 @@ package greenhome.greenhome;
 import android.support.v4.app.Fragment;
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
     private SectionsPageAdapter mSectionsPageAdapter;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,16 +61,10 @@ public class MainActivity extends AppCompatActivity {
         Question Test = Qs.pop();
         Test.CreateQuestion(rl);
 
-        //gabriels swipe studff?
-       // vSectionsPageAdapter = new SectionsPageAdapter(getSupportFragmentManager());
-
-        //mViewPager = (mViewPager) findViewById(R.id.container);
-        //setupViewPager(mViewPager);
-
 
 
     }
-/*
+
     private void setupViewPager(ViewPager viewPager) {
         SectionsPageAdapter adapter = new SectionsPageAdapter(getSupportFragmentManager());
         adapter.addFragment(new HomeFragment(), "Home");
@@ -77,5 +73,5 @@ public class MainActivity extends AppCompatActivity {
 
         viewPager.setAdapter(adapter);
     }
-*/
+
 }
