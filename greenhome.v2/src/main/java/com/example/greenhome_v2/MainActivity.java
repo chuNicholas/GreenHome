@@ -135,7 +135,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     public void showerConsumption() {
-        priceOfShowerWater = shower_Length * people_in_Household * 7.9;
+        priceOfShowerWater = shower_Length * people_in_Household * 0.03 * 30;
     }
 
     @Override
