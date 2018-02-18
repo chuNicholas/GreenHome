@@ -53,7 +53,7 @@ public class Question2 extends AppCompatActivity {
     {
         Stack<String> Qs = new Stack<>();
         Qs.push("How many people live in the household");
-        Qs.push("On average how long are you're showers?");
+        Qs.push("On average how long are your showers in minutes?");
         Qs.push("How many litres of Water do you use (Per Month");
         Qs.push("What car do you have?");
         Qs.push("Is it an Energy Saver?");

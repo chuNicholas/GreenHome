@@ -33,6 +33,8 @@ public class MainActivity extends AppCompatActivity
     static public double priceOfDishWasherWater;
     static public double priceofWasherElectricity;
     static public double priceofDishWasherElectricity;
+    static public int people_in_Household = 1;
+    static public int shower_Length = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
