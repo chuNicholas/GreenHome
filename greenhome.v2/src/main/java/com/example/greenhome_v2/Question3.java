@@ -47,11 +47,13 @@ public class Question3 extends AppCompatActivity {
     }
     private void LoadNext(Spinner options, CheckBox options2)
     {
-        writeToFile(options.getSelectedItem().toString(), this);
+        //writeToFile(options.getSelectedItem().toString(), this);
+        MainActivity.washing_Machine_Uses = Integer.parseInt(options.getSelectedItem().toString());
+
         if(options2.isChecked())
-            writeToFile("YES", this);
+            MainActivity.is_HE = true;
         else
-            writeToFile("NO", this);
+            MainActivity.is_HE = false;
         Intent myIntent = new Intent(Question3.this, Question4.class);
         Question3.this.startActivity(myIntent);
     }
@@ -68,7 +70,7 @@ public class Question3 extends AppCompatActivity {
         Qs.push("How many times do you use the Washing Machine per week?");
         return  Qs;
     }
-    private void writeToFile(String data,Context context) {
+    /*private void writeToFile(String data,Context context) {
         try {
 
             OutputStreamWriter outputStreamWriter = new OutputStreamWriter(context.openFileOutput("Answers.txt", Context.MODE_PRIVATE));
@@ -78,5 +80,5 @@ public class Question3 extends AppCompatActivity {
         catch (IOException e) {
             Log.e("Exception", "File write failed: " + e.toString());
         }
-    }
+    }*/
 }
