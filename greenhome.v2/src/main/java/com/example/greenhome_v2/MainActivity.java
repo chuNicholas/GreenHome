@@ -1,5 +1,6 @@
 package com.example.greenhome_v2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -15,10 +16,17 @@ import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
+    Boolean firstPlay = true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        firstPlay = getIntent().getBooleanExtra("arg", true);
+        if (firstPlay)
+        {
+            Intent myIntent = new Intent(MainActivity.this, openScreen.class);
+            MainActivity.this.startActivity(myIntent);
+            firstPlay = false;
+        }
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
