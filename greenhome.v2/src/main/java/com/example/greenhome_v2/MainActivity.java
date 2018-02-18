@@ -1,5 +1,6 @@
 package com.example.greenhome_v2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -82,15 +83,30 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_Home) {
             // Handle the camera action
+            Intent myIntent = new Intent(MainActivity.this, MainActivity.class);
+            MainActivity.this.startActivity(myIntent);
+
+
         } else if (id == R.id.nav_Goals) {
+            Intent myIntent = new Intent(MainActivity.this, Goals.class);
+            MainActivity.this.startActivity(myIntent);
 
         } else if (id == R.id.nav_Analysis) {
+            Intent myIntent = new Intent(MainActivity.this, activity_analysis.class);
+            MainActivity.this.startActivity(myIntent);
 
         } else if (id == R.id.nav_Shopping_List) {
+            Intent myIntent = new Intent(MainActivity.this, activity_shopping_list.class);
+            MainActivity.this.startActivity(myIntent);
 
         } else if (id == R.id.nav_Input) {
+            Intent myIntent = new Intent(MainActivity.this, activity_input.class);
+            MainActivity.this.startActivity(myIntent);
+
 
         } else if (id == R.id.nav_Settings) {
+            Intent myIntent = new Intent(MainActivity.this, activity_settings.class);
+            MainActivity.this.startActivity(myIntent);
 
         }
 

@@ -6,4 +6,8 @@
 
     <string name="action_settings">Settings</string>
     <string name="title_activity_goals">Goals</string>
+    <string name="title_activity_analysis">activity_analysis</string>
+    <string name="title_activity_shopping_list">activity_shopping_list</string>
+    <string name="title_activity_input">activity_input</string>
+    <string name="title_activity_settings">activity_settings</string>
 </resources>
