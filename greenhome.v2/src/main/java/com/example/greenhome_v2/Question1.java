@@ -44,8 +44,8 @@ public class Question1 extends AppCompatActivity {
         Qs.push("How many times do you use the dishwasher per week?");
         Qs.push("Is it HE?");
         Qs.push("How many times do you use the Washing Machine per week?");
-        Qs.push("About how many bulbs are in the house?");
         Qs.push("What kind of light bulbs do you use?");
+        Qs.push("About how many bulbs are in the house?");
         return Qs;
 
     }
