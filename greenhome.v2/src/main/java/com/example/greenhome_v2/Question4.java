@@ -63,7 +63,7 @@ public class Question4 extends AppCompatActivity {
         Qs.push("On average how long are you're showers?");
         Qs.push("How many litres of Water do you use (Per Month");
         Qs.push("What car do you have?");
-        Qs.push("Is it HE?");
+        Qs.push("Is it an Energy Saver?");
         Qs.push("How many times do you use the dishwasher per week?");
         return  Qs;
     }
