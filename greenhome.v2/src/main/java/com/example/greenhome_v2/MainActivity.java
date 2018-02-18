@@ -19,9 +19,14 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     Boolean firstPlay = true;
+    //ffbghhgbf
     static public Integer num_Of_Bulbs = 0;
     static public String type_Of_Bulb = "LED";
     static public Double priceOfLightBulbs;
+    static public Integer washing_Machine_Uses = 0;
+    static public Boolean is_HE = false;
+    static public Integer dish_Washer_Uses = 0;
+    static public Boolean is_ES = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
