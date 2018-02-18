@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
         TextView electricConsumption = findViewById(R.id.ElectricMoney);
         TextView waterConsumption = findViewById(R.id.WaterMoney);
-
+        lightBulbConsumption();
         electricConsumption.setText("Electricity per Month" + priceOfLightBulbs.toString());
     }
 
