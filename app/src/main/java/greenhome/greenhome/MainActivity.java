@@ -61,12 +61,6 @@ public class MainActivity extends AppCompatActivity {
         Question Test = Qs.pop();
         Test.CreateQuestion(rl);
 
-        //gabriels swipe studff?
-        mSectionsPageAdapter = new SectionsPageAdapter(getSupportFragmentManager());
-
-        ViewPager mViewPager = (ViewPager) findViewById(R.id.container);
-        setupViewPager(mViewPager);
-
 
 
     }
