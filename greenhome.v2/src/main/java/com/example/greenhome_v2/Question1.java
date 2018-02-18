@@ -57,7 +57,9 @@ public class Question1 extends AppCompatActivity {
     private void LoadNext(Stack<String> q)
     {
         TextInputEditText val = findViewById(R.id.AnswerField);
-        writeToFile(val.getText().toString(),this);
+        MainActivity.num_Of_Bulbs = Integer.parseInt( val.getText().toString());
+
+        //writeToFile(val.getText().toString(),this);
         Intent myIntent = new Intent(Question1.this, Question2.class);
         Question1.this.startActivity(myIntent);
 
@@ -68,6 +70,8 @@ public class Question1 extends AppCompatActivity {
         //outputStreamWriter.write(" ");
         //outputStreamWriter.close();
     }
+
+    /*
     private void writeToFile(String data,Context context) {
         try {
 
@@ -78,6 +82,8 @@ public class Question1 extends AppCompatActivity {
         catch (IOException e) {
             Log.e("Exception", "File write failed: " + e.toString());
         }
-    }
+    }*/
+
+
 
 }

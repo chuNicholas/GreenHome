@@ -42,8 +42,11 @@ public class Question2 extends AppCompatActivity {
     }
     private void LoadNext(Spinner options)
     {
-        writeToFile(options.getSelectedItem().toString(), this);
-        Intent myIntent = new Intent(Question2.this, Question3.class);
+        //writeToFile(options.getSelectedItem().toString(), this);
+        MainActivity.type_Of_Bulb = options.getSelectedItem().toString();
+
+
+                Intent myIntent = new Intent(Question2.this, Question3.class);
         Question2.this.startActivity(myIntent);
     }
     private Stack<String> LoadQuestions()
@@ -60,6 +63,8 @@ public class Question2 extends AppCompatActivity {
         Qs.push("What kind of lightbulbs are in the House");
         return  Qs;
     }
+
+    /*
     private void writeToFile(String data,Context context) {
         try {
 
@@ -70,5 +75,5 @@ public class Question2 extends AppCompatActivity {
         catch (IOException e) {
             Log.e("Exception", "File write failed: " + e.toString());
         }
-    }
+    }*/
 }
