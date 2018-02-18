@@ -23,10 +23,16 @@ public class MainActivity extends AppCompatActivity
     static public Integer num_Of_Bulbs = 0;
     static public String type_Of_Bulb = "LED";
     static public Double priceOfLightBulbs;
+    static public Double priceOfWater;
+    static public Double priceOfElectricity;
     static public Integer washing_Machine_Uses = 0;
     static public Boolean is_HE = false;
     static public Integer dish_Washer_Uses = 0;
     static public Boolean is_ES = false;
+    static public double priceOfWasherWater;
+    static public double priceOfDishWasherWater;
+    static public double priceofWasherElectricity;
+    static public double priceofDishWasherElectricity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,6 +97,38 @@ public class MainActivity extends AppCompatActivity
         else if (type_Of_Bulb == "Incandescent") {
             priceOfLightBulbs = costOfIncan * num_Of_Bulbs;
         }
+    }
+
+    public void waterConsumption() {
+        if (is_HE == true) {
+            priceOfWasherWater = washing_Machine_Uses * 0.43;
+        }
+        else if (is_HE == false) {
+            priceOfWasherWater = washing_Machine_Uses * 0.65;
+        }
+        if (is_ES == true) {
+            priceOfDishWasherWater = dish_Washer_Uses * 0.06;
+        }
+        else if (is_ES == false) {
+            priceOfDishWasherWater = dish_Washer_Uses * 0.09;
+        }
+        priceOfWater = priceOfWasherWater + priceOfDishWasherWater;
+    }
+
+    public void electricityConsumption() {
+        if (is_HE == true) {
+            priceofWasherElectricity = washing_Machine_Uses * 0.54;
+        }
+        else if (is_HE == false) {
+            priceofWasherElectricity = washing_Machine_Uses *  0.43;
+        }
+        if (is_ES == true) {
+            priceofDishWasherElectricity = dish_Washer_Uses * 1.40;
+        }
+        else if (is_ES == false) {
+            priceofDishWasherElectricity = dish_Washer_Uses * 1.12;
+        }
+        priceOfElectricity = priceofWasherElectricity + priceofDishWasherElectricity;
     }
 
     @Override
