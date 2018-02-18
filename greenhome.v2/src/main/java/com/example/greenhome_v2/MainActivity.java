@@ -73,12 +73,13 @@ public class MainActivity extends AppCompatActivity
         TextView Total = findViewById(R.id.TotalMoney);
         lightBulbConsumption();
         waterConsumption();
+        showerConsumption();
         electricityConsumption();
         double n = priceOfDishWasherWater + priceofWasherElectricity;
         waterConsumptionText.setText("Water per Month: $" + priceOfWater.toString());
         electricConsumption.setText("Electricity per Month: $" + priceOfElectricity.toString());
         Double val = priceOfWater + priceOfElectricity;
-        Total.setText("$" + val.toString());
+        Total.setText("Total: $" + val.toString());
     }
 
     @Override
@@ -143,6 +144,7 @@ public class MainActivity extends AppCompatActivity
 
     public void showerConsumption() {
         priceOfShowerWater = shower_Length * people_in_Household * 0.03 * 30;
+        priceOfWater += priceOfShowerWater;
     }
 
     @Override
@@ -176,32 +178,39 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_Home) {
             // Handle the camera action
             Intent myIntent = new Intent(MainActivity.this, MainActivity.class);
+            myIntent.putExtra("arg", false);
             MainActivity.this.startActivity(myIntent);
 
 
         } else if (id == R.id.nav_Goals) {
-            Intent myIntent = new Intent(MainActivity.this, Goals.class);
+            Intent myIntent = new Intent(MainActivity.this, MainActivity.class);
+            myIntent.putExtra("arg", false);
             MainActivity.this.startActivity(myIntent);
 
         } else if (id == R.id.nav_Analysis) {
-            Intent myIntent = new Intent(MainActivity.this, activity_analysis.class);
+            Intent myIntent = new Intent(MainActivity.this, MainActivity.class);
+            myIntent.putExtra("arg", false);
             MainActivity.this.startActivity(myIntent);
 
         } else if (id == R.id.nav_Shopping_List) {
-            Intent myIntent = new Intent(MainActivity.this, activity_shopping_list.class);
+            Intent myIntent = new Intent(MainActivity.this, MainActivity.class);
+            myIntent.putExtra("arg", false);
             MainActivity.this.startActivity(myIntent);
 
         } else if (id == R.id.nav_Input) {
-            Intent myIntent = new Intent(MainActivity.this, activity_input.class);
+            Intent myIntent = new Intent(MainActivity.this, MainActivity.class);
+            myIntent.putExtra("arg", false);
             MainActivity.this.startActivity(myIntent);
 
 
         } else if (id == R.id.nav_Settings) {
-            Intent myIntent = new Intent(MainActivity.this, activity_settings.class);
+            Intent myIntent = new Intent(MainActivity.this, MainActivity.class);
+            myIntent.putExtra("arg", false);
             MainActivity.this.startActivity(myIntent);
 
         } else if (id == R.id.nav_Connect_Device) {
-            Intent myIntent = new Intent(MainActivity.this, activity_connect_to_device.class);
+            Intent myIntent = new Intent(MainActivity.this, MainActivity.class);
+            myIntent.putExtra("arg", false);
             MainActivity.this.startActivity(myIntent);
 
         }
