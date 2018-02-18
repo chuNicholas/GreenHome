@@ -46,8 +46,10 @@ public class Question5 extends AppCompatActivity {
     }
     private void LoadNext(TextInputEditText options, Spinner options2)
     {
-        writeToFile(options.getText().toString(), this);
-        writeToFile(options2.getSelectedItem().toString(), this);
+        //writeToFile(options.getText().toString(), this);
+        MainActivity.shower_Length = Integer.parseInt(options.getText().toString());
+        //writeToFile(options2.getSelectedItem().toString(), this);
+        MainActivity.people_in_Household = Integer.parseInt(options2.getSelectedItem().toString());
         Intent myIntent = new Intent(Question5.this, Question6.class);
         Question5.this.startActivity(myIntent);
     }
@@ -56,9 +58,11 @@ public class Question5 extends AppCompatActivity {
         Stack<String> Qs = new Stack<>();
         Qs.push("What car do you have?");
         Qs.push("How many people live in the household");
-        Qs.push("On average how long are you're showers?");
+        Qs.push("On average how long are your showers in minutes?");
         return  Qs;
     }
+
+    /*
     private void writeToFile(String data,Context context) {
         try {
 
@@ -69,5 +73,5 @@ public class Question5 extends AppCompatActivity {
         catch (IOException e) {
             Log.e("Exception", "File write failed: " + e.toString());
         }
-    }
+    }*/
 }
