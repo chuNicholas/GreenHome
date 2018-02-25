@@ -56,12 +56,32 @@ public class Question1 extends AppCompatActivity {
     }
     private void LoadNext(Stack<String> q)
     {
-        TextInputEditText val = findViewById(R.id.AnswerField);
-        MainActivity.num_Of_Bulbs = Integer.parseInt( val.getText().toString());
 
-        //writeToFile(val.getText().toString(),this);
-        Intent myIntent = new Intent(Question1.this, Question2.class);
-        Question1.this.startActivity(myIntent);
+        //check if the user actually input something or if they overflow
+        // do not go to next screen if there is error
+
+        TextInputEditText val = findViewById(R.id.AnswerField);
+
+        boolean valid = false;
+        try {
+            Integer.parseInt(val.getText().toString());
+            valid=true;
+        }
+        catch (NumberFormatException e){
+
+        }
+
+
+        if(valid == false || Integer.parseInt(val.getText().toString()) > Integer.MAX_VALUE) {
+
+        }
+        else {
+            MainActivity.num_Of_Bulbs = Integer.parseInt(val.getText().toString());
+
+            //writeToFile(val.getText().toString(),this);
+            Intent myIntent = new Intent(Question1.this, Question2.class);
+            Question1.this.startActivity(myIntent);
+        }
 
     }
     private void Clear(Context context)
