@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity
     static public double priceOfDishWasherWater;
     static public double priceofWasherElectricity;
     static public double priceofDishWasherElectricity;
+    static public double priceOfShowerWater;
     static public int people_in_Household = 1;
     static public int shower_Length = 1;
 
@@ -68,9 +69,17 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         TextView electricConsumption = findViewById(R.id.ElectricMoney);
-        TextView waterConsumption = findViewById(R.id.WaterMoney);
+        TextView waterConsumptionText = findViewById(R.id.WaterMoney);
+        TextView Total = findViewById(R.id.TotalMoney);
         lightBulbConsumption();
-        electricConsumption.setText("Electricity per Month" + priceOfLightBulbs.toString());
+        waterConsumption();
+        showerConsumption();
+        electricityConsumption();
+        double n = priceOfDishWasherWater + priceofWasherElectricity;
+        waterConsumptionText.setText("Water per Month: $" + priceOfWater.toString());
+        electricConsumption.setText("Electricity per Month: $" + priceOfElectricity.toString());
+        Double val = priceOfWater + priceOfElectricity;
+        Total.setText("Total: $" + val.toString());
     }
 
     @Override
@@ -133,6 +142,11 @@ public class MainActivity extends AppCompatActivity
         priceOfElectricity = priceofWasherElectricity + priceofDishWasherElectricity;
     }
 
+    public void showerConsumption() {
+        priceOfShowerWater = shower_Length * people_in_Household * 0.03 * 30;
+        priceOfWater += priceOfShowerWater;
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -164,32 +178,39 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_Home) {
             // Handle the camera action
             Intent myIntent = new Intent(MainActivity.this, MainActivity.class);
+            myIntent.putExtra("arg", false);
             MainActivity.this.startActivity(myIntent);
 
 
         } else if (id == R.id.nav_Goals) {
-            Intent myIntent = new Intent(MainActivity.this, Goals.class);
+            Intent myIntent = new Intent(MainActivity.this, MainActivity.class);
+            myIntent.putExtra("arg", false);
             MainActivity.this.startActivity(myIntent);
 
         } else if (id == R.id.nav_Analysis) {
-            Intent myIntent = new Intent(MainActivity.this, activity_analysis.class);
+            Intent myIntent = new Intent(MainActivity.this, MainActivity.class);
+            myIntent.putExtra("arg", false);
             MainActivity.this.startActivity(myIntent);
 
         } else if (id == R.id.nav_Shopping_List) {
-            Intent myIntent = new Intent(MainActivity.this, activity_shopping_list.class);
+            Intent myIntent = new Intent(MainActivity.this, MainActivity.class);
+            myIntent.putExtra("arg", false);
             MainActivity.this.startActivity(myIntent);
 
         } else if (id == R.id.nav_Input) {
-            Intent myIntent = new Intent(MainActivity.this, activity_input.class);
+            Intent myIntent = new Intent(MainActivity.this, MainActivity.class);
+            myIntent.putExtra("arg", false);
             MainActivity.this.startActivity(myIntent);
 
 
         } else if (id == R.id.nav_Settings) {
-            Intent myIntent = new Intent(MainActivity.this, activity_settings.class);
+            Intent myIntent = new Intent(MainActivity.this, MainActivity.class);
+            myIntent.putExtra("arg", false);
             MainActivity.this.startActivity(myIntent);
 
         } else if (id == R.id.nav_Connect_Device) {
-            Intent myIntent = new Intent(MainActivity.this, activity_connect_to_device.class);
+            Intent myIntent = new Intent(MainActivity.this, MainActivity.class);
+            myIntent.putExtra("arg", false);
             MainActivity.this.startActivity(myIntent);
 
         }
