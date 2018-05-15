@@ -1,5 +1,5 @@
 # GreenHome
-UOttaHack 2017 Project
+UOttaHack 2018 Project
 By: Anson, Gabriel, Kashif, and Nicholas
 ---------------------------------------------
 Greenhome is an Android app which allows plan your daily activities with accordance with Smart Technology (ie. Thermostat, Lights, Vehicle, etc).
